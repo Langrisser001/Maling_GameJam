@@ -48,9 +48,13 @@ text = "Level 3"
 margin_left = 334.0
 margin_top = 497.0
 margin_right = 712.0
-margin_bottom = 528.0
+margin_bottom = 570.0
 text = "Hint:
--Satpam dengan seragam khusus dapat berjalan lebih cepat"
+-Satpam dengan seragam khusus dapat berjalan lebih cepat
+-Artefak tertentu mempunyai pengamanan khusus"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TargetDesc" type="Label" parent="Panel"]
 margin_left = 318.0
