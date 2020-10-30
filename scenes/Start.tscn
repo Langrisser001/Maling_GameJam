@@ -1,24 +1,47 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scenes/Start.gd" type="Script" id=1]
+[ext_resource path="res://textures/startMenu_bg.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Button.tscn" type="PackedScene" id=3]
 
 [node name="Start" type="Node2D"]
-script = ExtResource( 1 )
+position = Vector2( 0, 5 )
 
-[node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="menuStart" parent="." instance=ExtResource( 3 )]
+margin_left = 504.947
+margin_top = 350.549
+margin_right = 756.947
+margin_bottom = 387.549
+focus_neighbour_top = NodePath("../menuQuit")
+focus_neighbour_bottom = NodePath("../menuKredit")
+ref_ = "res://scenes/Main.tscn"
+focus_ = true
 
-[node name="Button" type="Button" parent="Control"]
-margin_left = 359.904
-margin_top = 262.36
-margin_right = 682.904
-margin_bottom = 337.36
-text = "START"
+[node name="menuKredit" parent="." instance=ExtResource( 3 )]
+margin_left = 504.947
+margin_top = 396.549
+margin_right = 756.947
+margin_bottom = 433.549
+focus_neighbour_top = NodePath("../menuStart")
+focus_neighbour_bottom = NodePath("../menuQuit")
+text = "Kredit"
+ref_ = "res://scenes/Credits.tscn"
+
+[node name="menuQuit" parent="." instance=ExtResource( 3 )]
+margin_left = 504.947
+margin_top = 443.549
+margin_right = 756.947
+margin_bottom = 480.549
+focus_neighbour_top = NodePath("../menuKredit")
+focus_neighbour_bottom = NodePath("../menuStart")
+text = "Keluar"
+
+[node name="startMenu_bg" type="Sprite" parent="."]
+position = Vector2( 640, 355 )
+z_index = -1
+texture = ExtResource( 2 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
-[connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="menuStart" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="menuKredit" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="menuQuit" to="." method="_on_Button3_pressed"]

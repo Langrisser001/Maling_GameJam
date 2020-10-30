@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://textures/kreditMenu_bg.png" type="Texture" id=1]
+[ext_resource path="res://scenes/backButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Credits.gd" type="Script" id=3]
+
+[node name="Credits" type="Node2D"]
+z_index = -1
+script = ExtResource( 3 )
+
+[node name="Button" parent="." instance=ExtResource( 2 )]
+margin_left = 518.648
+margin_top = 655.286
+margin_right = 770.648
+margin_bottom = 692.286
+ref_ = "res://scenes/Start.tscn"
+focus_ = true
+
+[node name="kreditMenu_bg" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+z_index = -1
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
