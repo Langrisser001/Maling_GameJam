@@ -1,3 +1,42 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Font/BackStoryContent.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Font/BackStoryTittle.tres" type="DynamicFont" id=2]
+[ext_resource path="res://textures/jail.jpg" type="Texture" id=3]
 
 [node name="Story" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -1.0
+margin_right = 1020.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tittle" type="Label" parent="Panel"]
+margin_left = 506.0
+margin_top = 49.0
+margin_right = 879.0
+margin_bottom = 116.0
+custom_fonts/font = ExtResource( 2 )
+text = "Latar Belakang"
+
+[node name="Content" type="Label" parent="Panel"]
+margin_left = 433.0
+margin_top = 143.0
+margin_right = 945.0
+margin_bottom = 536.0
+custom_fonts/font = ExtResource( 1 )
+text = "Perkenalkan, saya adalah Mr. PM. Begitulan julukan yang diberikan oleh rekan-rekan seprofesi. Sebelum tertangkap, saya adalah maling museum yang paling disegani, spesialis benda-benda bersejarah. Sering sekali saya  menerima \"pesanan\" dari kolektor-kolekter kelas dunia untuk mendapatkan item tertentu sesuai permintaan mereka.
+
+Dan ini adalah cerita saya ..."
+autowrap = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 108.0
+margin_top = 148.0
+margin_right = 2148.0
+margin_bottom = 3292.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
