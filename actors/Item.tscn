@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://actors/Item.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.4588, 9.10185 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 85.703, 26.5526 )
+
+[node name="Item" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 1.12245, -0.102157 )
+shape = SubResource( 1 )
+
+[node name="Item" type="Sprite" parent="."]
+self_modulate = Color( 0.164706, 0.878431, 0.0431373, 1 )
+position = Vector2( 0.8909, 0 )
+scale = Vector2( 0.515625, 1.23437 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -32 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 0.8909, 0 )
+scale = Vector2( 0.515625, 1.23437 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[node name="Icon" type="Sprite" parent="."]
+visible = false
+self_modulate = Color( 0.831373, 0.113725, 0.87451, 1 )
+position = Vector2( 0.864558, -110.309 )
+scale = Vector2( 0.515625, 0.566196 )
+texture = ExtResource( 1 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
