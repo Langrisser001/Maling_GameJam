@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://actors/Security.gd" type="Script" id=1]
 [ext_resource path="res://textures/security_red.png" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://actors/walk_S.tres" type="Animation" id=7]
 [ext_resource path="res://actors/walk_W.tres" type="Animation" id=8]
 [ext_resource path="res://actors/walk_N.tres" type="Animation" id=9]
+[ext_resource path="res://actors/Idle_N.tres" type="Animation" id=10]
+[ext_resource path="res://actors/Idle_E.tres" type="Animation" id=11]
+[ext_resource path="res://actors/Idle_S.tres" type="Animation" id=12]
+[ext_resource path="res://actors/Idle_W.tres" type="Animation" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.26566
@@ -34,10 +38,14 @@ texture = ExtResource( 2 )
 offset = Vector2( 0, -32 )
 vframes = 4
 hframes = 9
-frame = 28
+frame = 35
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_process_mode = 0
+anims/Idle_E = ExtResource( 11 )
+anims/Idle_N = ExtResource( 10 )
+anims/Idle_S = ExtResource( 12 )
+anims/Idle_W = ExtResource( 13 )
 anims/walk_E = ExtResource( 6 )
 anims/walk_N = ExtResource( 9 )
 anims/walk_S = ExtResource( 7 )
