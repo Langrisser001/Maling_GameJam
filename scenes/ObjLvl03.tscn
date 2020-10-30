@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Font/ObjectiveH1.tres" type="DynamicFont" id=1]
+[ext_resource path="res://textures/HelmetKavaleri.jpg" type="Texture" id=2]
+
+[node name="Lvl03" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = 4.0
+margin_right = 1020.0
+margin_bottom = 602.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 471.0
+margin_top = 62.0
+margin_right = 555.0
+margin_bottom = 95.0
+custom_fonts/font = ExtResource( 1 )
+text = "TARGET"
+
+[node name="TargetTittle" type="Label" parent="Panel"]
+margin_left = 381.0
+margin_top = 327.0
+margin_right = 675.0
+margin_bottom = 360.0
+custom_fonts/font = ExtResource( 1 )
+text = "Helm Kavaleri Ottoman"
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 430.0
+margin_top = 121.0
+margin_right = 1611.0
+margin_bottom = 1302.0
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 2 )
+
+[node name="LvlID" type="Label" parent="Panel"]
+margin_left = 31.0
+margin_top = 32.0
+margin_right = 77.0
+margin_bottom = 46.0
+text = "Level 3"
+
+[node name="Hint" type="Label" parent="Panel"]
+margin_left = 334.0
+margin_top = 497.0
+margin_right = 712.0
+margin_bottom = 528.0
+text = "Hint:
+-Satpam dengan seragam khusus dapat berjalan lebih cepat"
+
+[node name="TargetDesc" type="Label" parent="Panel"]
+margin_left = 318.0
+margin_top = 379.0
+margin_right = 805.0
+margin_bottom = 468.0
+text = "Klien saya yang satu ini adalah kolektor pedang. Beliau sangat tergila-gila dengan segala macam jenis pedang. Namun kali ini beliau ingin sebuah helm dari masa Kekaisaran Ottoman. Ingin memperluas wawasan kata beliau. Biar lebih open minded. 
+
+Klien saya memang rata-rata agak aneh."
+autowrap = true

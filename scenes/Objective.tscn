@@ -19,11 +19,11 @@ __meta__ = {
 
 [node name="TargetTiitle" type="Label" parent="Panel"]
 margin_left = 201.0
-margin_top = 321.0
-margin_right = 887.0
-margin_bottom = 354.0
+margin_top = 322.0
+margin_right = 901.0
+margin_bottom = 355.0
 custom_fonts/font = ExtResource( 2 )
-text = "Charles Sayers Portrait of Boy with Fighting Cock"
+text = "Lukisan Boy with Fighting Cock oleh Charles Sayers"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -52,7 +52,7 @@ margin_left = 356.0
 margin_top = 458.0
 margin_right = 713.0
 margin_bottom = 531.0
-text = "HINT
+text = "HINT:
 
 -Gunakan tombol panah untuk bergerak.
 -Dekati artefak dan tekan tombol X untuk mangambil"

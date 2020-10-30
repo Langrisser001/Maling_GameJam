@@ -24,14 +24,17 @@ text = "Latar Belakang"
 
 [node name="Content" type="Label" parent="Panel"]
 margin_left = 433.0
-margin_top = 143.0
+margin_top = 144.0
 margin_right = 945.0
-margin_bottom = 536.0
+margin_bottom = 537.0
 custom_fonts/font = ExtResource( 1 )
-text = "Perkenalkan, saya adalah Mr. PM. Begitulan julukan yang diberikan oleh rekan-rekan seprofesi. Sebelum tertangkap, saya adalah maling museum yang paling disegani, spesialis benda-benda bersejarah. Sering sekali saya  menerima \"pesanan\" dari kolektor-kolekter kelas dunia untuk mendapatkan item tertentu sesuai permintaan mereka.
+text = "Perkenalkan, saya adalah Mr. PM. Begitulan julukan yang diberikan oleh rekan-rekan seprofesi. Sebagai maling museum yang paling disegani, sering sekali saya menerima \"pesanan\" dari kolektor-kolekter kelas dunia untuk mendapatkan item tertentu sesuai permintaan mereka. Sampai pada akhirnya saya tertangkap.
 
-Dan ini adalah cerita saya ..."
+Berikut ini adalah kisah masa lalu saya ..."
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 margin_left = 108.0
