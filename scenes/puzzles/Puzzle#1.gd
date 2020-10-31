@@ -22,7 +22,7 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed:
 			counter= counter+ 1
-			$Label.text= String(counter)
+			$CanvasLayer/Control/Label.text= String(counter)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

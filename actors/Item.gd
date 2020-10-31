@@ -6,7 +6,7 @@ extends KinematicBody2D
 # var b = "text"
 
 export var use_puzzle: = true
-
+export var is_required= true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
