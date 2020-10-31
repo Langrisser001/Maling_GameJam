@@ -5,8 +5,8 @@
 [ext_resource path="res://actors/Item.tscn" type="PackedScene" id=3]
 [ext_resource path="res://actors/Security.tscn" type="PackedScene" id=4]
 [ext_resource path="res://textures/spotlight.png" type="Texture" id=5]
-[ext_resource path="res://scenes/backButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/interior.png" type="Texture" id=7]
+[ext_resource path="res://scenes/Main.gd" type="Script" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -222,6 +222,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 8/z_index = 0
 
 [node name="Main" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
 tile_set = SubResource( 10 )
@@ -248,10 +249,15 @@ position = Vector2( 435.324, 236.466 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.262745, 0.262745, 0.262745, 1 )
 
-[node name="Button" parent="." instance=ExtResource( 6 )]
-margin_left = 971.04
-margin_top = 621.651
-margin_right = 1223.04
-margin_bottom = 658.651
-ref_ = "res://scenes/Start.tscn"
-focus_ = true
+[node name="Menu" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Menu"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "XXXXXXX"
