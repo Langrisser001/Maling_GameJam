@@ -17,9 +17,18 @@ var v_dir: Vector2
 func _is_current_anim_idle():
 	return $AnimationPlayer.current_animation.find("Idle")!= -1
 
+func _input(event):
+	if event is InputEventKey:
+		if event.is_action_pressed("ui_accept"):
+			_take_item()
+	pass
+
 enum Face {W, N, E, S}
 var last_face
 func _process(delta):
+#	if Input.is_action_pressed("ui_accept"):
+#		_take_item()
+	
 	v_dir= Vector2.ZERO
 	if Input.is_action_pressed("ui_left"):
 		v_dir= v_dir+ Vector2.LEFT
@@ -83,15 +92,22 @@ func _process(delta):
 func _physics_process(delta):
 	move_and_slide(v_dir* speed, Vector2.UP)
 	pass
-	
-func _item_enter(item):
+
+var item	
+func _item_enter(newitem):
 	print("item enter")
+	item= newitem
 	pass
 	
 func _item_exit(item):
 	print("item exit")
+	item= null
 	pass
 	
+signal take_item
 func _take_item():
+	if item!= null:
+		print("emit take item")
+		emit_signal("take_item", self, item)
 	pass
 	
