@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	$ButtonStart.grab_focus()
 	pass
 
 func _on_ButtonStart_pressed():

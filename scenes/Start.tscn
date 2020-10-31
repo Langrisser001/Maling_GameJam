@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/Start.gd" type="Script" id=1]
 [ext_resource path="res://textures/startMenu_bg.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Button_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Font/Button_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://scenes/Button_press.tres" type="StyleBox" id=5]
 [ext_resource path="res://scenes/Button_hover.tres" type="StyleBox" id=6]
 
@@ -25,8 +25,8 @@ margin_left = 504.947
 margin_top = 350.549
 margin_right = 756.947
 margin_bottom = 387.549
-focus_neighbour_top = NodePath("../menuQuit")
-focus_neighbour_bottom = NodePath("../menuKredit")
+focus_neighbour_top = NodePath("../ButtonExit")
+focus_neighbour_bottom = NodePath("../ButtonCredit")
 custom_styles/hover = ExtResource( 6 )
 custom_styles/pressed = ExtResource( 5 )
 custom_styles/focus = ExtResource( 5 )
@@ -40,12 +40,12 @@ __meta__ = {
 }
 
 [node name="ButtonCredit" type="Button" parent="."]
-margin_left = 504.947
+margin_left = 505.654
 margin_top = 396.549
-margin_right = 756.947
+margin_right = 757.654
 margin_bottom = 433.549
-focus_neighbour_top = NodePath("../menuStart")
-focus_neighbour_bottom = NodePath("../menuQuit")
+focus_neighbour_top = NodePath("../ButtonStart")
+focus_neighbour_bottom = NodePath("../ButtonExit")
 custom_styles/hover = ExtResource( 6 )
 custom_styles/pressed = ExtResource( 5 )
 custom_styles/focus = ExtResource( 5 )
@@ -63,8 +63,8 @@ margin_left = 504.947
 margin_top = 443.549
 margin_right = 756.947
 margin_bottom = 480.549
-focus_neighbour_top = NodePath("../menuKredit")
-focus_neighbour_bottom = NodePath("../menuStart")
+focus_neighbour_top = NodePath("../ButtonCredit")
+focus_neighbour_bottom = NodePath("../ButtonStart")
 custom_styles/hover = ExtResource( 6 )
 custom_styles/pressed = ExtResource( 5 )
 custom_styles/focus = ExtResource( 5 )
