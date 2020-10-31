@@ -1,16 +1,187 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://textures/kreditMenu_bg.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Credits.gd" type="Script" id=3]
+[ext_resource path="res://Font/Credits.tres" type="DynamicFont" id=4]
 
 [node name="Credits" type="Node2D"]
 z_index = -1
 script = ExtResource( 3 )
 
-[node name="kreditMenu_bg" type="Sprite" parent="."]
-position = Vector2( 640, 360 )
-z_index = -1
-texture = ExtResource( 1 )
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_left = 3.56763
+margin_right = 1281.57
+margin_bottom = 717.0
+tab_align = 0
 __meta__ = {
-"_edit_lock_": true
+"_edit_use_anchors_": false
 }
+
+[node name="Credit Page 01" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="LinkMainMenuBG" type="LinkButton" parent="TabContainer/Credit Page 01"]
+margin_left = 370.168
+margin_top = 183.226
+margin_right = 1000.17
+margin_bottom = 205.226
+custom_fonts/font = ExtResource( 4 )
+text = "Link : Ornament vector created by vectorpouch - www.freepik.com"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkTiles" type="LinkButton" parent="TabContainer/Credit Page 01"]
+margin_left = 375.681
+margin_top = 364.229
+margin_right = 995.681
+margin_bottom = 386.229
+custom_fonts/font = ExtResource( 4 )
+text = "Link : https://opengameart.org/content/lpc-modified-base-tiles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LnkFont" type="LinkButton" parent="TabContainer/Credit Page 01"]
+margin_left = 376.0
+margin_top = 528.0
+margin_right = 912.0
+margin_bottom = 550.0
+custom_fonts/font = ExtResource( 4 )
+text = "Link : https://fonts.google.com/specimen/Syne+Mono"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tiles" type="Label" parent="TabContainer/Credit Page 01"]
+margin_left = 374.059
+margin_top = 267.822
+margin_right = 704.059
+margin_bottom = 339.822
+custom_fonts/font = ExtResource( 4 )
+text = "Tiles : 
+LPC: Modified base tiles by Sharm
+License : CC-BY-SA 3.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Font" type="Label" parent="TabContainer/Credit Page 01"]
+margin_left = 378.0
+margin_top = 431.0
+margin_right = 944.0
+margin_bottom = 503.0
+custom_fonts/font = ExtResource( 4 )
+text = "Font : 
+SyneMono-Regular by Bonjour Monde & Lucas Descroix
+License : Open Font"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenuBG" type="Label" parent="TabContainer/Credit Page 01"]
+margin_left = 366.6
+margin_top = 92.1435
+margin_right = 886.6
+margin_bottom = 189.143
+custom_fonts/font = ExtResource( 4 )
+text = "Main Menu Background : 
+Castle column empty corridor interior by vectorpouch
+License : Freepik License
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credit Page 02" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="FontTittle" type="Label" parent="TabContainer/Credit Page 02"]
+margin_left = 330.324
+margin_top = 76.0799
+margin_right = 896.324
+margin_bottom = 148.08
+custom_fonts/font = ExtResource( 4 )
+text = "Font : 
+Carter One by Vernon Adams
+License : Open Font"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jail" type="Label" parent="TabContainer/Credit Page 02"]
+margin_left = 330.324
+margin_top = 263.08
+margin_right = 896.324
+margin_bottom = 360.08
+custom_fonts/font = ExtResource( 4 )
+text = "Jail Image : 
+Law and justice cartoon banners set with convict in jail behind bars retro by macrovector
+License : Freepik License"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jail2" type="Label" parent="TabContainer/Credit Page 02"]
+margin_left = 331.432
+margin_top = 465.216
+margin_right = 964.432
+margin_bottom = 562.216
+custom_fonts/font = ExtResource( 4 )
+text = "Pixel Background: 
+Yellow and orange shades pixel background design by starline
+License : Freepik License"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LnkFontCO" type="LinkButton" parent="TabContainer/Credit Page 02"]
+margin_left = 329.384
+margin_top = 166.723
+margin_right = 999.384
+margin_bottom = 188.723
+custom_fonts/font = ExtResource( 4 )
+text = "Link : https://fonts.google.com/specimen/Carter+One#standard-styles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LnkJail" type="LinkButton" parent="TabContainer/Credit Page 02"]
+margin_left = 334.0
+margin_top = 378.0
+margin_right = 1134.0
+margin_bottom = 403.0
+custom_fonts/font = ExtResource( 4 )
+text = "Link :https://www.freepik.com/free-vector/law-justice-cartoon-banners-set-with"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LnkPixel" type="LinkButton" parent="TabContainer/Credit Page 02"]
+margin_left = 332.0
+margin_top = 553.0
+margin_right = 1192.0
+margin_bottom = 578.0
+custom_fonts/font = ExtResource( 4 )
+text = "Link :https://www.freepik.com/free-vector/yellow-orange-shades-pixel-background-design"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="TabContainer/Credit Page 01/LinkMainMenuBG" to="." method="_on_LinkMainMenuBG_pressed"]
+[connection signal="pressed" from="TabContainer/Credit Page 01/LinkTiles" to="." method="_on_LinkTiles_pressed"]
+[connection signal="pressed" from="TabContainer/Credit Page 01/LnkFont" to="." method="_on_LnkFont_pressed"]
+[connection signal="pressed" from="TabContainer/Credit Page 02/LnkFontCO" to="." method="_on_LnkFontCO_pressed"]
+[connection signal="pressed" from="TabContainer/Credit Page 02/LnkJail" to="." method="_on_LnkJail_pressed"]
+[connection signal="pressed" from="TabContainer/Credit Page 02/LnkPixel" to="." method="_on_LnkPixel_pressed"]
