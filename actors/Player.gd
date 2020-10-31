@@ -93,20 +93,25 @@ func _physics_process(delta):
 	move_and_slide(v_dir* speed, Vector2.UP)
 	pass
 
-var item	
+var item
+var is_item_near: = false
 func _item_enter(newitem):
 	print("item enter")
+	is_item_near= true
 	item= newitem
 	pass
-	
+
+signal item_exit	
 func _item_exit(item):
 	print("item exit")
+	emit_signal("item_exit")
 	item= null
+	is_item_near= false
 	pass
 	
 signal take_item
 func _take_item():
-	if item!= null:
+	if is_item_near:
 		print("emit take item")
 		emit_signal("take_item", self, item)
 	pass

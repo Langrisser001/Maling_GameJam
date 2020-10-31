@@ -6,11 +6,27 @@ var objDone: = false
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	$TileMap/Player.connect("take_item", self, "_player_take_item")
+	$TileMap/Player.connect("item_exit", self, "_player_item_exit")
 	pass # Replace with function body.
 
+var puzzle_node
 func _player_take_item(player, item):
 	print("PLAYER TAKE ITEM")
-	$Puzzle.visible= true
+	if item.use_puzzle:
+		var puzzle_res= preload("res://scenes/puzzles/Puzzle#1.tscn")
+		puzzle_node= puzzle_res.instance()
+		puzzle_node.connect("puzzle_done", self, "_puzzle_done")
+		$NodePuzzle.add_child(puzzle_node)
+		pass
+	pass
+
+func _puzzle_done():
+	$NodePuzzle.remove_child(puzzle_node)
+	pass
+
+func _player_item_exit():
+	print("PLAYER ITEM EXIT")
+	$NodePuzzle.remove_child(puzzle_node)
 	pass
 	
 func _process(delta):

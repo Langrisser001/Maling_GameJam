@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/puzzles/Puzzle#1.gd" type="Script" id=1]
+[ext_resource path="res://textures/mouse_1.png" type="Texture" id=2]
+[ext_resource path="res://textures/mouse_2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="Puzzle#1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 675.47, 356.762 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 638.094
+margin_top = 124.5
+margin_right = 678.094
+margin_bottom = 138.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
