@@ -16,17 +16,17 @@ func _player_take_item(player, item):
 		var puzzle_res= preload("res://scenes/puzzles/Puzzle#1.tscn")
 		puzzle_node= puzzle_res.instance()
 		puzzle_node.connect("puzzle_done", self, "_puzzle_done")
-		$NodePuzzle.add_child(puzzle_node)
+		$Control/NodePuzzle.add_child(puzzle_node)
 		pass
 	pass
 
 func _puzzle_done():
-	$NodePuzzle.remove_child(puzzle_node)
+	$Control/NodePuzzle.remove_child(puzzle_node)
 	pass
 
 func _player_item_exit():
 	print("PLAYER ITEM EXIT")
-	$NodePuzzle.remove_child(puzzle_node)
+	$Control/NodePuzzle.remove_child(puzzle_node)
 	pass
 	
 func _process(delta):
