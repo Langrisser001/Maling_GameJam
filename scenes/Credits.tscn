@@ -1,7 +1,33 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
+[ext_resource path="res://textures/kreditMenu_bg.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Button_press.tres" type="StyleBox" id=2]
 [ext_resource path="res://scenes/Credits.gd" type="Script" id=3]
 [ext_resource path="res://Font/Credits.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scenes/Button_hover.tres" type="StyleBox" id=5]
+[ext_resource path="res://Font/Button_font.tres" type="DynamicFont" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color( 0.14902, 0.14902, 0.14902, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 0.0
+bg_color = Color( 0.807843, 0.8, 0.784314, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [node name="Credits" type="Node2D"]
 z_index = -1
@@ -11,15 +37,24 @@ script = ExtResource( 3 )
 margin_left = 1.12244
 margin_right = 1284.12
 margin_bottom = 717.0
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TabContainer" type="TabContainer" parent="Panel"]
-margin_left = 0.755066
-margin_top = 1.12247
+anchor_left = 0.011
+anchor_top = 0.01
+anchor_right = 0.043
+anchor_bottom = 0.054
 margin_right = 1278.76
 margin_bottom = 649.122
+custom_styles/tab_fg = SubResource( 4 )
+custom_styles/tab_bg = SubResource( 5 )
+custom_styles/panel = SubResource( 2 )
+custom_colors/font_color_bg = Color( 0.34902, 0.341176, 0.32549, 1 )
+custom_constants/hseparation = 0
+custom_constants/side_margin = 0
 tab_align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -28,16 +63,13 @@ __meta__ = {
 [node name="Credit Page 01" type="Tabs" parent="Panel/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_top = 24.0
 
 [node name="LinkMainMenuBG" type="LinkButton" parent="Panel/TabContainer/Credit Page 01"]
-margin_left = 370.168
-margin_top = 183.226
-margin_right = 1000.17
-margin_bottom = 205.226
+margin_left = 348.787
+margin_top = 181.444
+margin_right = 978.788
+margin_bottom = 203.444
 custom_fonts/font = ExtResource( 4 )
 text = "Link : Ornament vector created by vectorpouch - www.freepik.com"
 __meta__ = {
@@ -45,10 +77,10 @@ __meta__ = {
 }
 
 [node name="LinkTiles" type="LinkButton" parent="Panel/TabContainer/Credit Page 01"]
-margin_left = 375.681
-margin_top = 364.229
-margin_right = 995.681
-margin_bottom = 386.229
+margin_left = 354.3
+margin_top = 362.447
+margin_right = 974.3
+margin_bottom = 384.447
 custom_fonts/font = ExtResource( 4 )
 text = "Link : https://opengameart.org/content/lpc-modified-base-tiles"
 __meta__ = {
@@ -56,10 +88,10 @@ __meta__ = {
 }
 
 [node name="LnkFont" type="LinkButton" parent="Panel/TabContainer/Credit Page 01"]
-margin_left = 376.0
-margin_top = 528.0
-margin_right = 912.0
-margin_bottom = 550.0
+margin_left = 354.618
+margin_top = 526.218
+margin_right = 890.619
+margin_bottom = 548.218
 custom_fonts/font = ExtResource( 4 )
 text = "Link : https://fonts.google.com/specimen/Syne+Mono"
 __meta__ = {
@@ -67,10 +99,10 @@ __meta__ = {
 }
 
 [node name="Tiles" type="Label" parent="Panel/TabContainer/Credit Page 01"]
-margin_left = 374.059
-margin_top = 267.822
-margin_right = 704.059
-margin_bottom = 339.822
+margin_left = 352.678
+margin_top = 266.04
+margin_right = 682.678
+margin_bottom = 338.04
 custom_fonts/font = ExtResource( 4 )
 text = "Tiles : 
 LPC: Modified base tiles by Sharm
@@ -80,10 +112,10 @@ __meta__ = {
 }
 
 [node name="Font" type="Label" parent="Panel/TabContainer/Credit Page 01"]
-margin_left = 378.0
-margin_top = 431.0
-margin_right = 944.0
-margin_bottom = 503.0
+margin_left = 356.618
+margin_top = 429.218
+margin_right = 922.619
+margin_bottom = 501.218
 custom_fonts/font = ExtResource( 4 )
 text = "Font : 
 SyneMono-Regular by Bonjour Monde & Lucas Descroix
@@ -93,10 +125,10 @@ __meta__ = {
 }
 
 [node name="MainMenuBG" type="Label" parent="Panel/TabContainer/Credit Page 01"]
-margin_left = 366.6
-margin_top = 92.1435
-margin_right = 886.6
-margin_bottom = 189.143
+margin_left = 345.219
+margin_top = 90.3617
+margin_right = 865.219
+margin_bottom = 187.362
 custom_fonts/font = ExtResource( 4 )
 text = "Main Menu Background : 
 Castle column empty corridor interior by vectorpouch
@@ -110,16 +142,13 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_top = 24.0
 
 [node name="FontTittle" type="Label" parent="Panel/TabContainer/Credit Page 02"]
-margin_left = 330.324
-margin_top = 76.0799
-margin_right = 896.324
-margin_bottom = 148.08
+margin_left = 241.234
+margin_top = 67.1709
+margin_right = 807.234
+margin_bottom = 139.171
 custom_fonts/font = ExtResource( 4 )
 text = "Font : 
 Carter One by Vernon Adams
@@ -129,10 +158,10 @@ __meta__ = {
 }
 
 [node name="Jail" type="Label" parent="Panel/TabContainer/Credit Page 02"]
-margin_left = 330.324
-margin_top = 263.08
-margin_right = 896.324
-margin_bottom = 360.08
+margin_left = 241.234
+margin_top = 254.171
+margin_right = 807.234
+margin_bottom = 351.171
 custom_fonts/font = ExtResource( 4 )
 text = "Jail Image : 
 Law and justice cartoon banners set with convict in jail behind bars retro by macrovector
@@ -143,10 +172,10 @@ __meta__ = {
 }
 
 [node name="Jail2" type="Label" parent="Panel/TabContainer/Credit Page 02"]
-margin_left = 331.432
-margin_top = 465.216
-margin_right = 964.432
-margin_bottom = 562.216
+margin_left = 242.342
+margin_top = 456.307
+margin_right = 875.342
+margin_bottom = 553.307
 custom_fonts/font = ExtResource( 4 )
 text = "Pixel Background: 
 Yellow and orange shades pixel background design by starline
@@ -157,10 +186,10 @@ __meta__ = {
 }
 
 [node name="LnkFontCO" type="LinkButton" parent="Panel/TabContainer/Credit Page 02"]
-margin_left = 329.384
-margin_top = 166.723
-margin_right = 999.384
-margin_bottom = 188.723
+margin_left = 240.294
+margin_top = 157.814
+margin_right = 910.294
+margin_bottom = 179.814
 custom_fonts/font = ExtResource( 4 )
 text = "Link : https://fonts.google.com/specimen/Carter+One#standard-styles"
 __meta__ = {
@@ -168,10 +197,10 @@ __meta__ = {
 }
 
 [node name="LnkJail" type="LinkButton" parent="Panel/TabContainer/Credit Page 02"]
-margin_left = 334.0
-margin_top = 378.0
-margin_right = 1134.0
-margin_bottom = 403.0
+margin_left = 244.91
+margin_top = 369.091
+margin_right = 1044.91
+margin_bottom = 394.091
 custom_fonts/font = ExtResource( 4 )
 text = "Link :https://www.freepik.com/free-vector/law-justice-cartoon-banners-set-with"
 __meta__ = {
@@ -179,10 +208,10 @@ __meta__ = {
 }
 
 [node name="LnkPixel" type="LinkButton" parent="Panel/TabContainer/Credit Page 02"]
-margin_left = 332.0
-margin_top = 553.0
-margin_right = 1192.0
-margin_bottom = 578.0
+margin_left = 242.91
+margin_top = 544.091
+margin_right = 1102.91
+margin_bottom = 569.091
 custom_fonts/font = ExtResource( 4 )
 text = "Link :https://www.freepik.com/free-vector/yellow-orange-shades-pixel-background-design"
 __meta__ = {
@@ -194,14 +223,14 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 32.0
+margin_top = 24.0
 margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="MainOST" type="Label" parent="Panel/TabContainer/Credit Page 03"]
-margin_left = 277.134
+margin_left = 163.099
 margin_top = 74.8907
-margin_right = 843.134
+margin_right = 729.099
 margin_bottom = 146.891
 custom_fonts/font = ExtResource( 4 )
 text = "Theme Song: 
@@ -212,10 +241,10 @@ __meta__ = {
 }
 
 [node name="Animation" type="Label" parent="Panel/TabContainer/Credit Page 03"]
-margin_left = 278.0
+margin_left = 163.965
 margin_top = 240.0
-margin_right = 844.0
-margin_bottom = 427.0
+margin_right = 729.965
+margin_bottom = 487.0
 custom_fonts/font = ExtResource( 4 )
 text = "Characters & Animations :
 LPC Assets
@@ -228,9 +257,9 @@ __meta__ = {
 }
 
 [node name="LnkOST" type="LinkButton" parent="Panel/TabContainer/Credit Page 03"]
-margin_left = 279.0
+margin_left = 164.965
 margin_top = 180.0
-margin_right = 601.0
+margin_right = 486.965
 margin_bottom = 205.0
 custom_fonts/font = ExtResource( 4 )
 text = "Link :https://incompetech.com"
@@ -239,9 +268,9 @@ __meta__ = {
 }
 
 [node name="LnkAnim" type="LinkButton" parent="Panel/TabContainer/Credit Page 03"]
-margin_left = 279.0
+margin_left = 164.965
 margin_top = 504.0
-margin_right = 601.0
+margin_right = 694.965
 margin_bottom = 529.0
 custom_fonts/font = ExtResource( 4 )
 text = "Link Assets : https://opengameart.org/lpc-art-entries"
@@ -250,9 +279,9 @@ __meta__ = {
 }
 
 [node name="LnkGenerator" type="LinkButton" parent="Panel/TabContainer/Credit Page 03"]
-margin_left = 279.0
+margin_left = 164.965
 margin_top = 539.0
-margin_right = 1239.0
+margin_right = 1124.96
 margin_bottom = 564.0
 custom_fonts/font = ExtResource( 4 )
 text = "Link Generator : https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator/#"
@@ -261,13 +290,27 @@ __meta__ = {
 }
 
 [node name="BtExit" type="Button" parent="Panel"]
-margin_left = 494.654
-margin_top = 665.612
-margin_right = 750.654
-margin_bottom = 706.612
+margin_left = 497.482
+margin_top = 648.641
+margin_right = 753.482
+margin_bottom = 689.641
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color_hover = Color( 0.34902, 0.341176, 0.32549, 1 )
 text = "Kembali"
 __meta__ = {
 "_edit_use_anchors_": false
+}
+
+[node name="kreditMenu_bg" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+z_index = -1
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
 }
 [connection signal="pressed" from="Panel/TabContainer/Credit Page 01/LinkMainMenuBG" to="." method="_on_LinkMainMenuBG_pressed"]
 [connection signal="pressed" from="Panel/TabContainer/Credit Page 01/LinkTiles" to="." method="_on_LinkTiles_pressed"]

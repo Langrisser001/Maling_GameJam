@@ -13,12 +13,12 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if(body is Player):
-		$Icon.visible= true
+		$Item.visible= true
 		body._item_enter(self)
 	pass # Replace with function body.
 
 func _on_Area2D_body_exited(body):
 	if(body is Player):
-		$Icon.visible= false
+		$Item.visible= false
 		body._item_exit(self)
 	pass # Replace with function body.
