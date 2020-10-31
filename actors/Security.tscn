@@ -1,13 +1,22 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://actors/Security.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://textures/security_red.png" type="Texture" id=2]
 [ext_resource path="res://textures/spotlight.png" type="Texture" id=3]
 [ext_resource path="res://actors/LightArea.gd" type="Script" id=4]
 [ext_resource path="res://actors/SecurityHit.gd" type="Script" id=5]
+[ext_resource path="res://actors/walk_E.tres" type="Animation" id=6]
+[ext_resource path="res://actors/walk_S.tres" type="Animation" id=7]
+[ext_resource path="res://actors/walk_W.tres" type="Animation" id=8]
+[ext_resource path="res://actors/walk_N.tres" type="Animation" id=9]
+[ext_resource path="res://actors/Idle_N.tres" type="Animation" id=10]
+[ext_resource path="res://actors/Idle_E.tres" type="Animation" id=11]
+[ext_resource path="res://actors/Idle_S.tres" type="Animation" id=12]
+[ext_resource path="res://actors/Idle_W.tres" type="Animation" id=13]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.7567, 7.03262 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.26566
+height = 21.411
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 31.761
@@ -18,14 +27,29 @@ radius = 31.2361
 [node name="Security" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.12131, -8.15926 )
+rotation = 1.57293
+shape = SubResource( 1 )
+
 [node name="Sprite" type="Sprite" parent="."]
-self_modulate = Color( 0.976471, 0.376471, 0.376471, 1 )
 light_mask = 16
 texture = ExtResource( 2 )
 offset = Vector2( 0, -32 )
+vframes = 4
+hframes = 9
+frame = 35
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_process_mode = 0
+anims/Idle_E = ExtResource( 11 )
+anims/Idle_N = ExtResource( 10 )
+anims/Idle_S = ExtResource( 12 )
+anims/Idle_W = ExtResource( 13 )
+anims/walk_E = ExtResource( 6 )
+anims/walk_N = ExtResource( 9 )
+anims/walk_S = ExtResource( 7 )
+anims/walk_W = ExtResource( 8 )
 
 [node name="Spotlight" type="Light2D" parent="."]
 position = Vector2( 0, 50 )
