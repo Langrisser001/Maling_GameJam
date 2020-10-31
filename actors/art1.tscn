@@ -9,7 +9,7 @@
 extents = Vector2( 51.4777, 17.8978 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 85.703, 26.5526 )
+extents = Vector2( 113.98, 30.4283 )
 
 [node name="Item" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -27,21 +27,21 @@ z_index = 2
 texture = ExtResource( 5 )
 
 [node name="Item" type="Sprite" parent="."]
-position = Vector2( -0.363444, -51.0855 )
+visible = false
+position = Vector2( -2.72312, -52.0294 )
 scale = Vector2( 1.17118, 1.17118 )
 z_index = 1
 texture = ExtResource( 4 )
 vframes = 4
 hframes = 9
-frame = 12
+frame = 13
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 position = Vector2( 0.8909, 0 )
 scale = Vector2( 0.515625, 1.23437 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 1.72781, -12.6305 )
+position = Vector2( -3.76379, 15.6619 )
 shape = SubResource( 2 )
 
 [node name="Icon" type="Sprite" parent="."]
@@ -53,9 +53,8 @@ z_index = 1
 texture = ExtResource( 1 )
 
 [node name="museum_thing" type="Sprite" parent="."]
-position = Vector2( -2.68128, -51.5842 )
+position = Vector2( -4.09708, -51.5842 )
 scale = Vector2( 1.16856, 1.15544 )
-z_index = 3
 texture = ExtResource( 4 )
 vframes = 4
 hframes = 9

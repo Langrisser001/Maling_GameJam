@@ -1,12 +1,26 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Lose.gd" type="Script" id=1]
+[ext_resource path="res://Font/Button_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/Button_hover.tres" type="StyleBox" id=3]
+[ext_resource path="res://scenes/Button_press.tres" type="StyleBox" id=4]
+[ext_resource path="res://Font/GameOver_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://textures/gameOver_bg.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="Lose" type="Node2D"]
 pause_mode = 2
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gameOver_bg" type="Sprite" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0.505882 )
+position = Vector2( 641.606, 354.948 )
+texture = ExtResource( 6 )
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 margin_right = 40.0
@@ -16,21 +30,51 @@ __meta__ = {
 }
 
 [node name="ButtonBack" type="Button" parent="CanvasLayer/Control"]
-margin_right = 223.0
-margin_bottom = 68.0
-text = "KEMBALI"
+margin_left = 535.989
+margin_top = 324.512
+margin_right = 758.989
+margin_bottom = 392.512
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.34902, 0.341176, 0.32549, 1 )
+text = "Menu Utama"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonRetry" type="Button" parent="CanvasLayer/Control"]
-margin_left = 271.636
-margin_right = 494.636
-margin_bottom = 68.0
-text = "ULANGI"
+margin_left = 537.767
+margin_top = 405.469
+margin_right = 760.767
+margin_bottom = 473.469
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_hover = Color( 0.34902, 0.341176, 0.32549, 1 )
+text = "Main Lagi"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 480.32
+margin_top = 218.198
+margin_right = 802.32
+margin_bottom = 312.554
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Game Over"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
 }
 [connection signal="pressed" from="CanvasLayer/Control/ButtonBack" to="." method="_on_ButtonBack_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/ButtonRetry" to="." method="_on_ButtonRetry_pressed"]
