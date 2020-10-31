@@ -7,9 +7,9 @@
 [ext_resource path="res://Font/GameOver_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://textures/gameOver_bg.png" type="Texture" id=6]
 
-[sub_resource type="StyleBoxEmpty" id=2]
-
 [sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="Lose" type="Node2D"]
 pause_mode = 2
@@ -37,7 +37,7 @@ margin_bottom = 392.512
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/focus = ExtResource( 4 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/normal = SubResource( 1 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.34902, 0.341176, 0.32549, 1 )
@@ -54,7 +54,7 @@ margin_bottom = 473.469
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/focus = ExtResource( 4 )
-custom_styles/normal = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_hover = Color( 0.34902, 0.341176, 0.32549, 1 )
 text = "Main Lagi"
