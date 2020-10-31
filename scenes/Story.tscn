@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Font/BackStoryContent.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Font/BackStoryTittle.tres" type="DynamicFont" id=2]
 [ext_resource path="res://textures/jail.jpg" type="Texture" id=3]
+[ext_resource path="res://scenes/Story.gd" type="Script" id=4]
 
 [node name="Story" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = -1.0
@@ -43,3 +45,9 @@ margin_right = 2148.0
 margin_bottom = 3292.0
 rect_scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

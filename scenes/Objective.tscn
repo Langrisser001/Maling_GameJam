@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://textures/Painting01.jpg" type="Texture" id=1]
 [ext_resource path="res://Font/ObjectiveH1.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/Objective.gd" type="Script" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
 [node name="Objective" type="Node2D"]
 material = SubResource( 1 )
+script = ExtResource( 3 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = -1.48016
@@ -80,3 +82,9 @@ text = "TARGET"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

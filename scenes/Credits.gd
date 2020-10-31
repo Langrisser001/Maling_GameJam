@@ -42,3 +42,19 @@ func _on_LnkJail_pressed():
 
 func _on_LnkPixel_pressed():
 	OS.shell_open("https://www.freepik.com/free-vector/yellow-orange-shades-pixel-background-design_9874820.htm#query=Pixel%20background&position=14")
+
+
+func _on_LnkOST_pressed():
+	OS.shell_open("https://incompetech.com")
+
+
+func _on_LnkAnim_pressed():
+	OS.shell_open("https://opengameart.org/lpc-art-entries")
+
+
+func _on_LnkGenerator_pressed():
+	OS.shell_open("https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator/#")
+
+
+func _on_BtExit_pressed():
+	get_tree().change_scene("res://scenes/Start.tscn")

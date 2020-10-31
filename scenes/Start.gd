@@ -5,7 +5,7 @@ func _ready():
 	pass
 
 func _on_ButtonStart_pressed():
-	get_tree().change_scene("res://scenes/Main.tscn")
+	get_tree().change_scene("res://scenes/Story.tscn")
 	pass # Replace with function body.
 
 func _on_ButtonCredit_pressed():

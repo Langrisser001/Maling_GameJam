@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://actors/Security.gd" type="Script" id=1]
-[ext_resource path="res://textures/security_red.png" type="Texture" id=2]
+[ext_resource path="res://textures/security_blue.png" type="Texture" id=2]
 [ext_resource path="res://textures/spotlight.png" type="Texture" id=3]
 [ext_resource path="res://actors/walk_E.tres" type="Animation" id=6]
 [ext_resource path="res://actors/walk_S.tres" type="Animation" id=7]

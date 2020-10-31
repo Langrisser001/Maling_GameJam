@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Win.gd" type="Script" id=1]
+
+[node name="Win" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_right = 348.0
+margin_bottom = 108.0
+text = "NEXT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

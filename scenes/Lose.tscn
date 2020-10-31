@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Lose.gd" type="Script" id=1]
+
+[node name="Lose" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonBack" type="Button" parent="CanvasLayer/Control"]
+margin_right = 223.0
+margin_bottom = 68.0
+text = "KEMBALI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRetry" type="Button" parent="CanvasLayer/Control"]
+margin_left = 271.636
+margin_right = 494.636
+margin_bottom = 68.0
+text = "ULANGI"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+[connection signal="pressed" from="CanvasLayer/Control/ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/ButtonRetry" to="." method="_on_ButtonRetry_pressed"]
